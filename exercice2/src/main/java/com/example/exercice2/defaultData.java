@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.awt.*;
 import java.time.LocalDate;
 
 @Configuration
@@ -17,9 +18,9 @@ public class defaultData {
     CommandLineRunner initDatabase(FilmRepository filmRepo, RealisateurRepository realisateurRepo) {
         return args -> {
             // --- Réalisateurs ---
-            Realisateur spielberg = new Realisateur(null, "Spielberg", "Steven", LocalDate.of(1946, 12, 18), "Américaine");
-            Realisateur nolan = new Realisateur(null, "Nolan", "Christopher", LocalDate.of(1970, 7, 30), "Britannique");
-            Realisateur tarantino = new Realisateur(null, "Tarantino", "Quentin", LocalDate.of(1963, 3, 27), "Américaine");
+            Realisateur spielberg = new Realisateur(null, "Spielberg", "Steven", LocalDate.of(1946, 12, 18), "Américaine","");
+            Realisateur nolan = new Realisateur(null, "Nolan", "Christopher", LocalDate.of(1970, 7, 30), "Britannique", List<"">);
+            Realisateur tarantino = new Realisateur(null, "Tarantino", "Quentin", LocalDate.of(1963, 3, 27), "Américaine","");
 
             realisateurRepo.save(spielberg);
             realisateurRepo.save(nolan);
